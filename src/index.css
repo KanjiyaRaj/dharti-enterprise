@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-display: 'Sora', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Base surfaces (formerly dark tones — now the premium light palette) */
+    --color-obsidian: #FFFFFF;      /* main background */
+    --color-graphite: #F5F7F8;      /* secondary/alternating background */
+    --color-charcoal: #DDE3E7;      /* borders + soft card tints */
+    /* Brand accents */
+    --color-copper: #1688C9;        /* brand blue — primary accent */
+    --color-gold: #075985;          /* deep blue — stronger hover/headings */
+    --color-cyan: #22A9D6;          /* cyan — sparing secondary highlight */
+    --color-whatsapp: #36B37E;      /* green — reserved for WhatsApp actions */
+    --color-whatsapp-dark: #279466; /* green hover */
+    /* Typography */
+    --color-offwhite: #111827;      /* primary text (dark charcoal) */
+    --color-softgray: #EEF1F3;      /* soft industrial surface */
+    --color-mutedgray: #4B5563;     /* secondary text */
+    --color-faint: #6B7280;         /* muted/tertiary text */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Align hash-link destinations directly below the fixed 72px navigation bar. */
+[id] {
+    scroll-margin-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-obsidian);
+    color: var(--color-offwhite);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--color-copper);
+    color: #FFFFFF;
+}
+
+/* Visible focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Blueprint grid texture utility */
+.bp-grid {
+    background-image: linear-gradient(to right, rgba(22, 136, 201, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 136, 201, 0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+}
+
+/* Corner bracket panel */
+.tech-frame {
+    position: relative;
+}
+
+.tech-frame::before,
+.tech-frame::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--color-copper);
+    opacity: 0.8;
+}
+
+.tech-frame::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+.tech-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Leaflet popup theming */
+.leaflet-popup-content-wrapper {
+    background: #FFFFFF;
+    color: var(--color-offwhite);
+    border-radius: 4px;
+    border: 1px solid rgba(22, 136, 201, 0.3);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12);
+}
+
+.leaflet-popup-tip {
+    background: #FFFFFF;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: var(--color-mutedgray);
+}
