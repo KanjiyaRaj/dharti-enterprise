@@ -74,7 +74,7 @@ export default function Hero() {
 
                 <div className="mt-9 flex flex-wrap gap-4">
                     <a
-                        href="#products"
+                        href="/products"
                         className="inline-flex items-center gap-2 bg-copper text-obsidian px-6 py-3.5 font-medium text-sm hover:bg-gold transition-colors"
                     >
                         Explore Products

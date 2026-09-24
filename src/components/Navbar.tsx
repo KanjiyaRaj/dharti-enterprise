@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {Menu, MessageCircle, X} from "lucide-react";
-import {siteConfig} from "../config/siteConfig";
 import {generalEnquiryLink} from "../utils/whatsapp";
+import {siteConfig} from "../config/siteConfig.ts";
 
 const links = [
     {href: "/#home", label: "Home"},
@@ -33,14 +33,19 @@ export default function Navbar() {
                     : "bg-obsidian/70 backdrop-blur-sm border-b border-transparent"
             }`}
         >
-            <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-5 md:px-10 h-18 py-4">
+            <nav className="max-w-360 mx-auto flex items-center justify-between px-5 md:px-10 h-18 py-4">
                 <Link to="/" className="flex items-center gap-2.5 shrink-0">
-                    <span className="w-9 h-9 rounded-sm border border-copper/60 flex items-center justify-center">
-            <span className="w-3 h-3 bg-copper rotate-45"/>
-          </span>
+                    {/*          <span className="w-9 h-9 rounded-sm border border-copper/60 flex items-center justify-center">*/}
+                    {/*  <span className="w-3 h-3 bg-copper rotate-45"/>*/}
+                    {/*</span>*/}
+                    {/*          <span className="font-display font-semibold text-lg text-offwhite tracking-tight">*/}
+                    {/*  {siteConfig.shortName}*/}
+                    {/*</span>*/}
+                    <img src="/images/branding/dharti_enterprise_logo-removebg-preview.png" alt="dharti enterprise"
+                         className="h-7 w-7"/>
                     <span className="font-display font-semibold text-lg text-offwhite tracking-tight">
-            {siteConfig.shortName}
-          </span>
+                      {siteConfig.shortName}
+                    </span>
                 </Link>
 
                 <ul className="hidden lg:flex items-center gap-8 font-body text-sm text-mutedgray">
