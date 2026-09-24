@@ -13,12 +13,12 @@ export const siteConfig = {
 
     address: "SHAKTI CHEMBAR-2, AAROHI COMPLEX , AT. LALPAR , MORBI-2 , GUJARAT, INDIA", // YOUR ADDRESS
 
-    website: "www.yourcompany.com", // YOUR WEBSITE
+    website: "www.dhartienterprise.com", // YOUR WEBSITE
 
     logo: "/images/branding/dharti-enterprise-logo.png",
     favicon: "/favicon-32x32.png",
 
-    catalogueUrl: "/catalogue/dharti-enterprise-catalogue.pdf",
+    catalogueUrl: "https://jfglvajwsjhovwncaqir.supabase.co/storage/v1/object/public/catalogue/dharti%20enterprise%20catalogue.pdf",
 
     socialLinks: {
         instagram: "",
