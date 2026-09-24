@@ -1,5 +1,4 @@
 import type { Product } from "../../data/products";
-import { categoryTitle } from "../../data/products";
 import ProductCard from "./ProductCard";
 
 export default function ProductGrid({
@@ -28,7 +27,7 @@ export default function ProductGrid({
               id={`cat-${group.category}`}
               className="font-display font-semibold text-lg sm:text-xl text-offwhite uppercase tracking-wide"
             >
-              {categoryTitle(group.category)}
+              {group.category}
             </h2>
             <span className="font-mono text-xs text-mutedgray">
               {group.items.length} {group.items.length === 1 ? "product" : "products"}

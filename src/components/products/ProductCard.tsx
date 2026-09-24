@@ -1,5 +1,4 @@
 import type { Product } from "../../data/products";
-import { categoryTitle } from "../../data/products";
 import ProductImage from "./ProductImage";
 
 export default function ProductCard({
@@ -23,7 +22,7 @@ export default function ProductCard({
       />
       <div className="p-3.5 flex flex-col gap-1 flex-1">
         <span className="font-mono text-[10px] tracking-wide text-copper uppercase">
-          {categoryTitle(product.category)}
+          {product.category}
         </span>
         <h3 className="font-display font-semibold text-sm text-offwhite leading-snug">
           {product.name}

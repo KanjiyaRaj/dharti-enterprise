@@ -20,25 +20,26 @@ export interface Product {
     catalogPage: number;
     image?: string;
     featured?: boolean;
+    sizes?: string;
 }
 
 export const categories: ProductCategoryDef[] = [
     {
         id: "polishing-head-device-kd268c-00",
-        title: "Polishing Head Device (KD268C.00)",
+        title: "Polishing Head Device",
         description: "Components and replacement parts for the ceramic tile polishing head device.",
         icon: "Layers",
 
     },
     {
         id: "squaring-head-device-kd356e-00",
-        title: "Squaring Head Device (KD356E.00)",
+        title: "Squaring Head Device",
         description: "Components and replacement parts for the ceramic tile squaring head device.",
         icon: "Settings",
     },
     {
         id: "main-drive-parts-tbsc10",
-        title: "Main Drive Parts (TBSC10)",
+        title: "Main Drive Parts",
         description: "Main drive components used in ceramic manufacturing machinery.",
         icon: "Cog",
     },
@@ -50,7 +51,7 @@ export const categories: ProductCategoryDef[] = [
     },
     {
         id: "jib-support-parts-tbsb1-00",
-        title: "Jib Support Parts (TBSB1.00)",
+        title: "Jib Support Parts",
         description: "Jib support and structural components for ceramic production machinery.",
         icon: "Wrench",
     },
@@ -62,7 +63,7 @@ export const categories: ProductCategoryDef[] = [
     },
     {
         id: "chamfering-head-parts-kd379-00",
-        title: "Chamfering Head Parts (KD379.00)",
+        title: "Chamfering Head Parts",
         description: "Components and replacement parts for the ceramic tile chamfering head device.",
         icon: "Slice",
     },
@@ -74,7 +75,7 @@ export const categories: ProductCategoryDef[] = [
     },
     {
         id: "polishing-unit-parts-tpsa-00",
-        title: "Polishing Unit Parts (TPSA.00)",
+        title: "Polishing Unit Parts",
         description: "Components and replacement parts for ceramic tile polishing units.",
         icon: "Factory",
     },
@@ -104,7 +105,7 @@ export const categories: ProductCategoryDef[] = [
     },
     {
         id: "hydraulic-cylinder-pump-spares-yb",
-        title: "Hydraulic Cylinder Pump Spares (YB)",
+        title: "Hydraulic Cylinder Pump Spares",
         description: "Spare parts for hydraulic cylinder pumps used in ceramic production machinery.",
         icon: "Droplet",
     },
@@ -114,18 +115,18 @@ export const categories: ProductCategoryDef[] = [
         description: "Spare parts for rotary pumps used in ceramic manufacturing applications.",
         icon: "RefreshCw",
     },
-    {
-        id: "general-machinery-components-consumables",
-        title: "General Machinery Components & Consumables",
-        description: "Belts, rollers, filters and other general components used across ceramic production machinery.",
-        icon: "Boxes",
-    },
-    {
-        id: "grinding-chamfering-sizing-wheels",
-        title: "Grinding, Chamfering & Sizing Wheels",
-        description: "Grinding, chamfering and sizing wheels, rollers and belts used in ceramic tile finishing lines.",
-        icon: "CircleDot",
-    },
+    // {
+    //     id: "general-machinery-components-consumables",
+    //     title: "General Machinery Components & Consumables",
+    //     description: "Belts, rollers, filters and other general components used across ceramic production machinery.",
+    //     icon: "Boxes",
+    // },
+    // {
+    //     id: "grinding-chamfering-sizing-wheels",
+    //     title: "Grinding, Chamfering & Sizing Wheels",
+    //     description: "Grinding, chamfering and sizing wheels, rollers and belts used in ceramic tile finishing lines.",
+    //     icon: "CircleDot",
+    // },
 ];
 
 export const products: Product[] = [
@@ -150,6 +151,8 @@ export const products: Product[] = [
         description: "Components and replacement parts for the ceramic tile polishing head device.",
         application: "Used in ceramic-industry machinery and equipment (Polishing Head Device (KD268C.00)).",
         catalogPage: 1,
+        image: "/images/products/polishing/head.webp",
+        featured: true,
     },
     {
         id: "polishing-head-device-kd268c-00-3",
@@ -1476,7 +1479,6 @@ export const products: Product[] = [
         description: "Components and replacement parts for the ceramic tile chamfering head device.",
         application: "Used in ceramic-industry machinery and equipment (Chamfering Head Parts (KD379.00)).",
         catalogPage: 7,
-        featured: true,
     },
     {
         id: "chamfering-head-parts-kd379-00-137",
@@ -3221,7 +3223,6 @@ export const products: Product[] = [
         description: "Spare parts for hydraulic cylinder pumps used in ceramic production machinery.",
         application: "Used in ceramic-industry machinery and equipment (Hydraulic Cylinder Pump Spares (YB)).",
         catalogPage: 14,
-        featured: true,
     },
     {
         id: "hydraulic-cylinder-pump-spares-yb-320",
@@ -3366,7 +3367,6 @@ export const products: Product[] = [
         description: "Spare parts for rotary pumps used in ceramic manufacturing applications.",
         application: "Used in ceramic-industry machinery and equipment (Rotary Pump Spare Parts).",
         catalogPage: 16,
-        featured: true,
     },
     {
         id: "rotary-pump-spare-parts-336",
@@ -3662,7 +3662,6 @@ export const products: Product[] = [
         description: "Grinding, chamfering and sizing wheels, rollers and belts used in ceramic tile finishing lines.",
         application: "Used in ceramic-industry machinery and equipment (Grinding, Chamfering & Sizing Wheels).",
         catalogPage: 18,
-        featured: true,
     },
     {
         id: "grinding-chamfering-sizing-wheels-chamfering-wheel",
@@ -3762,7 +3761,41 @@ export const products: Product[] = [
     },
 ];
 
-export const featuredProducts = products.filter((p) => p.featured);
+// export const featuredProducts = products.filter((p) => p.featured);
+export const featuredProducts = [
+    {
+        id: "polishing-head-device-kd268c-00-1",
+        name: "Polishing Head Device",
+        category: "polishing-head-device-kd268c-00",
+        itemNumber: 1,
+        productCode: "KD268c-00-1",
+        description: "Components and replacement parts for the ceramic tile polishing head device.",
+        application: "used to grind, smooth, and buff ceramic tile or slab surfaces to a uniform gloss or mirror finish",
+        catalogPage: 1,
+        image: "/images/products/polishing/head.webp",
+    },
+    {
+        id: "rotary-pump-spare-parts-335",
+        name: "Rottary Pump",
+        category: "rottary-pump",
+        itemNumber: 335,
+        description: "Spare parts for rotary pumps used in ceramic manufacturing applications.",
+        application: "Used to transfer highly viscous and abrasive fluid mixtures from storage tanks to processing areas or spray drying towers.",
+        catalogPage: 16,
+        image: "/images/products/polishing/rottary pump.png",
+    },
+    {
+        id: "polishing-head-device-kd268c-00-13",
+        name: "Mid Gear",
+        category: "polishing-head-device-kd268c-00",
+        itemNumber: 13,
+        productCode: "KD268C-04",
+        description: "Components and replacement parts for the ceramic tile polishing head device.",
+        application: "Used in ceramic-industry machinery and equipment (Polishing Head Device (KD268C.00)).",
+        catalogPage: 1,
+        image: "/images/products/polishing/MID GEAR.png",
+    },
+]
 
 export function categoryTitle(categoryId: string): string {
     return categories.find((c) => c.id === categoryId)?.title ?? categoryId;

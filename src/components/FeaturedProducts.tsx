@@ -47,7 +47,7 @@ export default function FeaturedProducts() {
                         <Reveal key={p.id} delay={(i % 3) * 70}>
                             <article
                                 className="group border border-charcoal bg-obsidian h-full flex flex-col shadow-sm hover:shadow-lg transition-shadow">
-                                <div className="aspect-[10/7] overflow-hidden">
+                                <div className="aspect-5/3 w-full overflow-hidden">
 
                                     {!p.image ? <div
                                         className="w-full h-full transition-transform duration-500 group-hover:scale-105">

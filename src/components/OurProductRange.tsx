@@ -28,8 +28,6 @@ const productRangeCategories = PRIMARY_CATEGORY_IDS.map((id) =>
     categories.find((c) => c.id === id)
 ).filter((c): c is NonNullable<typeof c> => Boolean(c));
 
-console.log(productRangeCategories)
-
 
 export default function OurProductRange() {
     return (
