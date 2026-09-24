@@ -15,7 +15,7 @@ export const siteConfig = {
 
     website: "www.dhartienterprise.com", // YOUR WEBSITE
 
-    logo: "/images/branding/dharti-enterprise-logo.png",
+    logo: "/images/branding/dharti enterprise logo.png",
     favicon: "/favicon-32x32.png",
 
     catalogueUrl: "https://jfglvajwsjhovwncaqir.supabase.co/storage/v1/object/public/catalogue/dharti%20enterprise%20catalogue.pdf",
