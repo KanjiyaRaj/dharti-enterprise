@@ -31,12 +31,18 @@ export default function Footer() {
                 <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
                     <div>
                         <a href="/#home" className="flex items-center gap-2.5 shrink-0">
-              <span className="w-9 h-9 rounded-sm border border-copper/60 flex items-center justify-center">
-            <span className="w-3 h-3 bg-copper rotate-45"/>
-          </span>
+                            {/*    <span className="w-9 h-9 rounded-sm border border-copper/60 flex items-center justify-center">*/}
+                            {/*  <span className="w-3 h-3 bg-copper rotate-45"/>*/}
+                            {/*</span>*/}
+                            {/*                  <span className="font-display font-semibold text-lg text-offwhite tracking-tight">*/}
+                            {/*  {siteConfig.shortName}*/}
+                            {/*</span>*/}
+                            <img src="/images/branding/dharti_enterprise_logo-removebg-preview.png"
+                                 alt="dharti enterprise"
+                                 className="h-7 w-7"/>
                             <span className="font-display font-semibold text-lg text-offwhite tracking-tight">
-            {siteConfig.shortName}
-          </span>
+                      {siteConfig.shortName}
+                    </span>
                         </a>
                         <p className="mt-4 max-w-xs text-sm text-mutedgray leading-relaxed">
                             Dharti Enterprise supplies specialized hardware, machinery
